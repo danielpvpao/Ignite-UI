@@ -18,6 +18,9 @@ const config: StorybookConfig = {
     name: "@storybook/react-vite",
     options: {},
   },
+  "core":{
+    "builder": '@storybook/builder-vite'
+  },
   viteFinal: (config, {configType}) => {
     if (configType === 'PRODUCTION') {
       config.base = '/Ignite-UI/'
