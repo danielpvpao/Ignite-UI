@@ -21,8 +21,13 @@ jobs:
 
       - run: npm run build
 
+      - name: Create .nojekyll file
+        run: |
+          mkdir -p ./packages/docs/storybook-static
+          touch ./packages/docs/storybook-static/.nojekyll
+
       - name: Deploy Storybook
         working-directory: ./packages/docs
-        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static/.nojekyll 
+        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
