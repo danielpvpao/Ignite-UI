@@ -15,15 +15,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 22
+          node-version: '22'
 
       - run: npm ci
 
       - run: npm run build
 
-      - name: Deploy storybook
+      - name: Deploy Storybook
         working-directory: ./packages/docs
-        jekyll: false
-        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
+        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static.nojekyll 
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
