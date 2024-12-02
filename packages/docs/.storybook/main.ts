@@ -18,11 +18,24 @@ const config: StorybookConfig = {
     name: "@storybook/react-vite",
     options: {},
   },
-  viteFinal: (config, {configType}) => {
+  viteFinal: (config, { configType }) => {
     if (configType === 'PRODUCTION') {
-      config.base = '/Ignite-UI/'
+      config.base = '/Ignite-UI/';
+      
+      // Certifique-se de que os assets sejam servidos corretamente
+      config.build.assetsDir = 'assets';  // Ajuste conforme a sua estrutura de diretórios
+      
+      if (config.build) {
+        config.build.rollupOptions = {
+          ...config.build.rollupOptions,
+          output: {
+            ...config.build.rollupOptions?.output,
+            publicPath: '/Ignite-UI/',  // Defina o caminho para os assets estáticos
+          },
+        };
+      }
     }
-    return config
-  }
+    return config;
+  },
 };
 export default config;
