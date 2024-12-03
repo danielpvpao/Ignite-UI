@@ -23,7 +23,7 @@ jobs:
 
       - run: npm run build
         env:
-          TURBO_TOKEN: DwrfUShF7YaZBM5Ai3fCHwIx
+          TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           TURBO_TEAM: danielpvpaos-projects
       - name: Create .nojekyll file
         run: |
