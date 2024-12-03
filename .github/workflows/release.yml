@@ -23,7 +23,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
 
-      - run: npm ci
+      - run: npm ci  
 
       - run: npm run build
 
@@ -33,6 +33,7 @@ jobs:
           touch ./packages/docs/storybook-static/.nojekyll
 
       - name: Install Dependencies
+        run: npm install  
 
       - name: Publish to npm
         id: changesets
