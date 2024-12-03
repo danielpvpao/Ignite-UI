@@ -41,7 +41,7 @@ jobs:
         with:
           publish: npm run release
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           TURBO_TEAM: danielpvpaos-projects
