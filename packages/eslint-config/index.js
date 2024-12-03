@@ -1,3 +1,3 @@
-module.exports = {
-    extends: ['@rocketseat/eslint-config/react']
-}
+    module.exports = {
+        extends: ['@rocketseat/eslint-config/react']
+    }

@@ -20,7 +20,9 @@ jobs:
       - run: npm ci
 
       - run: npm run build
-
+        env:
+          TURBO_TOKEN: sMZODq49AovBRdkEetxQFmFm
+          TURBO_TEAM: danielpvpaos
       - name: Create .nojekyll file
         run: |
           mkdir -p ./packages/docs/storybook-static
