@@ -1,5 +1,11 @@
 # @dan-ignite-ui/react
 
+## 7.1.0
+
+### Minor Changes
+
+- Reset
+
 ## 7.0.0
 
 ### Major Changes
