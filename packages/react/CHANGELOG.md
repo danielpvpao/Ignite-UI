@@ -1,5 +1,11 @@
 # @dan-ignite-ui/react
 
+## 7.0.0
+
+### Major Changes
+
+- Novo TESTE
+
 ## 6.0.0
 
 ### Major Changes
