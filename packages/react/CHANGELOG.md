@@ -1,5 +1,15 @@
 # @dan-ignite-ui/react
 
+## 5.0.0
+
+### Major Changes
+
+- f48aba1: Teste
+
+### Patch Changes
+
+- cc6433c: Teste
+
 ## 4.0.0
 
 ### Major Changes
