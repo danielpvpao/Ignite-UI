@@ -11,8 +11,9 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+
     steps:
-     - name: Checkout
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -25,12 +26,11 @@ jobs:
       - run: npm ci
 
       - run: npm run build
-      
+
       - name: Create .nojekyll file
         run: |
           mkdir -p ./packages/docs/storybook-static
           touch ./packages/docs/storybook-static/.nojekyll
-
 
       - name: Install Dependencies
         run: yarn
@@ -39,12 +39,9 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          # This expects you to have a script called release which does a build for your packages and calls changeset publish
           publish: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           TURBO_TOKEN: DwrfUShF7YaZBM5Ai3fCHwIx
           TURBO_TEAM: danielpvpaos-projects
-
-     
