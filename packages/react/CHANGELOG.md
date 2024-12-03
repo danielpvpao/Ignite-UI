@@ -1,5 +1,11 @@
 # @dan-ignite-ui/react
 
+## 4.0.0
+
+### Major Changes
+
+- Added toast and Tooltip components
+
 ## 3.1.0
 
 ### Minor Changes
